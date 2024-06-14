@@ -1,4 +1,4 @@
-# TripPlanner
+đ# TripPlanner
 - Projekt za kolegij Informacijski sustavi
 - Autor: *Iva Batur *
 - JMBAG: 0269125088
@@ -24,6 +24,7 @@ Aplikacija koristi lokalno skladište (localStorage) za pohranu podataka o desti
 
 
 
+#####
 ##### 
 - .dockerignore-  specificira koje datoteke i direktoriji trebaju biti ignorirani od strane Dockera pri kreiranju slika, pomažući da veličina slike ostane mala i isključujući nepotrebne datoteke.
 - Dockerfile- sadrži upute za izgradnju Docker slike web aplikacije, specificirajući osnovnu sliku, ovisnosti i naredbe za postavljanje.
