@@ -1,0 +1,101 @@
+body {
+    background-color: #ADD8E6; 
+    color: #000000; 
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+
+header {
+    background-color: #000080; 
+    padding: 10px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    color: #ffffff;
+}
+
+header nav a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+main {
+    max-width: 800px; 
+    margin: 20px auto; 
+    padding: 20px;
+    background-color: #ADD8E6;
+    color: #000000; 
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form input[type="text"],
+form textarea,
+form input[type="date"],
+form button {
+    display: block;
+    width: 100%; 
+    margin: 10px 0; 
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+form button {
+    background-color: #000080; 
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #5a5aad;
+}
+
+
+section {
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #000080; 
+}
+.visited {
+    background-color: #d3d3d3; 
+    opacity: 0.7; 
+    border-left: 5px solid #000080; 
+    padding-left: 10px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+li img {
+    margin-right: 15px;
+    border-radius: 5px;
+    width: 60px; 
+    height: 60px;
+    object-fit: cover;
+}
+li span {
+    font-size: 1.2rem; 
+    font-weight: bold; 
+}
