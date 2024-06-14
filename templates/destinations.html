@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destinations</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <header>
+        <h1>Destinations</h1>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/destinations">Destinations</a>
+            <a href="/interesting">Interesting Locations</a>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>My Destinations</h2>
+            <div id="destinations-container"></div>
+        </section>
+    </main>
+    <script>
+document.addEventListener('DOMContentLoaded', function() {
+    var destinationsContainer = document.getElementById('destinations-container');
+
+    var destinations = JSON.parse(localStorage.getItem('destinations')) || [];
+
+    function renderDestinations() {
+        destinationsContainer.innerHTML = '';
+        destinations.forEach(function(destination, index) {
+            var newDestination = document.createElement('div');
+            newDestination.classList.add('destination-item'); 
+            newDestination.innerHTML = '<h3>' + destination.name + '</h3>' +
+                                        '<p><strong>Description:</strong> ' + destination.description + '</p>' +
+                                        '<p><strong>Location:</strong> ' + destination.location + '</p>' +
+                                        '<p><strong>Date:</strong> ' + destination.date + '</p>' +
+                                        '<button class="edit-btn">Edit</button>' + // Dodajemo gumb za uređivanje
+                                        '<button class="delete-btn">Delete</button>' + // Dodajemo gumb za brisanje
+                                        '<input type="checkbox" class="visited-checkbox"' + (destination.visited ? ' checked' : '') + '> Visited'; 
+
+            // Dodajemo event listener za brisanje
+            var deleteButton = newDestination.querySelector('.delete-btn');
+            deleteButton.addEventListener('click', function() {
+                newDestination.remove(); 
+
+                // Ažuriramo localStorage
+                destinations.splice(index, 1);
+                localStorage.setItem('destinations', JSON.stringify(destinations));
+                renderDestinations();
+            });
+
+            // Dodajemo event listener za uređivanje
+            var editButton = newDestination.querySelector('.edit-btn');
+            editButton.addEventListener('click', function() {
+                var newName = prompt("Enter new name:", destination.name);
+                var newDescription = prompt("Enter new description:", destination.description);
+                var newLocation = prompt("Enter new location:", destination.location);
+                var newDate = prompt("Enter new date:", destination.date);
+
+                if (newName && newDescription && newLocation && newDate) {
+                    destination.name = newName;
+                    destination.description = newDescription;
+                    destination.location = newLocation;
+                    destination.date = newDate;
+
+                    localStorage.setItem('destinations', JSON.stringify(destinations));
+                    renderDestinations(); 
+                }
+            });
+
+                var visitedCheckbox = newDestination.querySelector('.visited-checkbox');
+                visitedCheckbox.addEventListener('change', function() {
+                    if (visitedCheckbox.checked) {
+                        newDestination.classList.add('visited'); // Dodajemo klasu 'visited' kada se destinacija označi kao posjećena
+                    } else {
+                        newDestination.classList.remove('visited'); // Uklanjamo klasu 'visited' kada se destinacija odznači
+                    }
+                });
+
+            destinationsContainer.appendChild(newDestination);
+        });
+    }
+
+    renderDestinations();
+});
+
+
+    </script>
+</body>
+</html>
