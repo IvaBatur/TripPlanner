@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TripPlanner</title>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to TripPlanner</h1>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/destinations">Destinations</a>
+            <a href="/interesting">Interesting Locations</a>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Add a New Destination</h2>
+            <form id="add-destination-form">
+                <input type="text" id="name" placeholder="Name" required autocomplete="name">
+                <textarea id="description" placeholder="Description" required></textarea>
+                <input type="text" id="location" placeholder="Location" required>
+                <div class="form-row">
+                    <label for="date">Date:</label>
+                    <input type="date" id="date" name="date" required>
+                </div>
+                <button type="submit" id= "add-destination-btn" >Add Destination</button>
+            </form>
+        </section>
+    </main>
+    <script src="static/skript.js"></script>
+</body>
+</html>
