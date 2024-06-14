@@ -21,12 +21,7 @@ Aplikacija koristi lokalno skladište (localStorage) za pohranu podataka o desti
 - destinations.html-  prikazuje popis korisničkih destinacija i omogućuje interakciju s tim destinacijama kroz funkcionalnosti uređivanja, brisanja i označavanja kao posjećene. 
 - index.html- sadrži osnovnu strukturu početne stranice koja korisnicima omogućuje dodavanje novih destinacija.
 - interesting.html- Ova stranica korisnicima omogućuje pregled zanimljivih mjesta za posjetiti zajedno s slikama, pružajući inspiraciju i informacije za buduća putovanja 
-#
-#
-#
-#
-#
-#
+
 # 
 - .dockerignore-  specificira koje datoteke i direktoriji trebaju biti ignorirani od strane Dockera pri kreiranju slika, pomažući da veličina slike ostane mala i isključujući nepotrebne datoteke.
 - Dockerfile- sadrži upute za izgradnju Docker slike web aplikacije, specificirajući osnovnu sliku, ovisnosti i naredbe za postavljanje.
