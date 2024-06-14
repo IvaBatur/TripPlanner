@@ -1,4 +1,4 @@
-đ# TripPlanner
+# TripPlanner
 - Projekt za kolegij Informacijski sustavi
 - Autor: *Iva Batur *
 - JMBAG: 0269125088
