@@ -99,3 +99,46 @@ li span {
     font-size: 1.2rem; 
     font-weight: bold; 
 }
+.destination-item {
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.destination-item h3 {
+    margin-top: 0;
+    color: #000080;
+}
+
+.edit-btn, .delete-btn {
+    background-color: #000080;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin: 5px 5px 5px 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.edit-btn:hover, .delete-btn:hover {
+    background-color: #5a5aad;
+}
+
+.visited-checkbox {
+    margin-left: 10px;
+}
+
+.visited-label {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.visited-label input[type="checkbox"] {
+    width: auto;
+    margin-right: 10px;
+}
