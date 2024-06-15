@@ -33,7 +33,7 @@ Aplikacija koristi lokalno skladište (localStorage) za pohranu podataka o desti
 - requirements.txt - osigurava konzistentnosti okruženja i izbjegava probleme s kompatibilnošću između različitih verzija paketa.
 ## 
 
-## UseCase dijagram
+## UseCase diagram
 ![alt text](https://github.com/IvaBatur/TripPlanner/blob/main/Use%20case%20diagram.jpeg)
 
 ## Instalacija
