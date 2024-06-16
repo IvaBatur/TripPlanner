@@ -142,3 +142,7 @@ li span {
     width: auto;
     margin-right: 10px;
 }
+.highlight {
+    border: 2px solid red;
+    background-color: #f0f0f0;
+}
