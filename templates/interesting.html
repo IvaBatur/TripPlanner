@@ -55,6 +55,34 @@
             </ul>
         </section>
     </main>
-    <script src="/static/skript.js"></script>
+    <script>
+document.addEventListener('DOMContentLoaded', function() {
+    var locationItems = document.querySelectorAll('ul li');
+
+    locationItems.forEach(function(item) {
+        // Event listener za klik na cijelu stavku liste
+        item.addEventListener('click', function() {
+            locationItems.forEach(function(el) {
+                el.classList.remove('highlight');
+            });
+            item.classList.add('highlight');
+        });
+
+        // Event listener za klik na sliku
+        var img = item.querySelector('img');
+        if (img) {
+            img.addEventListener('click', function(event) {
+                event.stopPropagation(); // Zaustavi propagaciju kako bi izbjegao isticanje stavke
+                var link = img.closest('li').querySelector('a');
+                if (link) {
+                    window.open(link.href, '_blank');
+                }
+            });
+        }
+    });
+});
+
+
+</script>
 </body>
 </html>
