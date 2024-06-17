@@ -7,13 +7,15 @@ document.addEventListener('DOMContentLoaded', function() {
         var name = document.getElementById('name').value;
         var description = document.getElementById('description').value;
         var location = document.getElementById('location').value;
-        var date = document.getElementById('date').value;
-
-        var newDestination = {
+        var departureDate = document.getElementById('departure-date').value;
+         var returnDate = document.getElementById('return-date').value;
+        
+	var newDestination = {
             name: name,
             description: description,
             location: location,
-            date: date
+            departureDate: departureDate,
+	     returnDate: returnDate,
         };
 
         var destinations = JSON.parse(localStorage.getItem('destinations')) || [];
